@@ -1,0 +1,94 @@
+{
+  "id": "mughal-sample",
+  "title": "The Empire Between Two Pages",
+  "topic": "Mughal Empire",
+  "language": "English",
+  "level": "Intermediate",
+  "mode": "hybrid",
+  "sourceLabel": "Sample study pack · pages 12–28",
+  "sourceRange": "pp. 12–28",
+  "savedAt": null,
+  "episodes": [
+    {
+      "id": "ep-1",
+      "number": 1,
+      "title": "A Doorway to Hindustan",
+      "summary": "A young empire begins with a crossing, a calculation and a new political imagination.",
+      "facts": [
+        "Babur defeated Ibrahim Lodi at the First Battle of Panipat in 1526.",
+        "The victory established Mughal rule in North India."
+      ],
+      "scenes": [
+        {
+          "id": "ep1-sc1",
+          "type": "narration",
+          "title": "Before the dust settled",
+          "narration": "The plain near Panipat was not only a battlefield. It was a question written across a map: who could turn a victory into a lasting state?",
+          "dialogue": [],
+          "background": "panipat-dawn",
+          "character": "babur",
+          "source": "pp. 12–14",
+          "interpretation": "Dramatic framing based on the strategic context; the event itself is historical."
+        },
+        {
+          "id": "ep1-sc2",
+          "type": "dialogue",
+          "title": "The map on the table",
+          "narration": "Inside the command tent, decisions became lines, distances and risk.",
+          "dialogue": [
+            {"speaker": "Babur", "text": "A victory is a beginning, not a kingdom."},
+            {"speaker": "Narrator", "text": "This dialogue is a fictional dramatic interpretation, not a recorded quotation."}
+          ],
+          "background": "command-tent",
+          "character": "babur",
+          "source": "pp. 14–16",
+          "interpretation": "Fictional dialogue used to explain the strategic problem."
+        }
+      ],
+      "quiz": [
+        {"id": "q1", "question": "In which year did the First Battle of Panipat take place?", "options": ["1498", "1526", "1556", "1605"], "answer": 1, "explanation": "The battle took place in 1526."},
+        {"id": "q2", "question": "What did the victory establish in North India?", "options": ["Mughal rule", "The Maratha Confederacy", "The Gupta Empire", "A trading company"], "answer": 0, "explanation": "The victory established Mughal rule in North India."}
+      ]
+    },
+    {
+      "id": "ep-2",
+      "number": 2,
+      "title": "The Architecture of Continuity",
+      "summary": "Power becomes durable when administration, culture and memory begin to reinforce one another.",
+      "facts": [
+        "Mughal administration developed systems for organising revenue and military service.",
+        "Mughal architecture blended influences from Central Asia and the Indian subcontinent."
+      ],
+      "scenes": [
+        {
+          "id": "ep2-sc1",
+          "type": "narration",
+          "title": "More than a throne",
+          "narration": "An empire is not held together by a crown alone. It needs roads for orders, records for memory and people who can translate intention into routine.",
+          "dialogue": [],
+          "background": "imperial-archive",
+          "character": "scribe",
+          "source": "pp. 20–23",
+          "interpretation": "Narrative explanation built from the selected study material."
+        },
+        {
+          "id": "ep2-sc2",
+          "type": "dialogue",
+          "title": "Stone remembers",
+          "narration": "A building could be a statement, a meeting place and a memory device at once.",
+          "dialogue": [
+            {"speaker": "Architect", "text": "If people return to a place, the place becomes part of their story."},
+            {"speaker": "Narrator", "text": "The conversation is imagined to make the architectural idea easier to remember."}
+          ],
+          "background": "red-fort-courtyard",
+          "character": "architect",
+          "source": "pp. 24–28",
+          "interpretation": "Fictional dialogue; architectural context is educational."
+        }
+      ],
+      "quiz": [
+        {"id": "q3", "question": "Which combination best describes Mughal architecture?", "options": ["Only European influences", "Central Asian and Indian influences", "Only modern industrial forms", "No cultural exchange"], "answer": 1, "explanation": "Mughal architecture combined Central Asian and Indian influences."}
+      ]
+    }
+  ]
+}

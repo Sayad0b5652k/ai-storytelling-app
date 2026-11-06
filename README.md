@@ -35,3 +35,11 @@ Repository bootstrap complete. The next milestone is a thin vertical slice: topi
 ## Collaboration
 
 Read [`COLLABORATION.md`](./COLLABORATION.md) before changing the repository.
+
+## Working prototype
+
+The first vertical slice now runs as a lightweight responsive web app. Start it with `npm run dev` and open `http://localhost:3000`.
+
+It includes any-topic setup, a material-mode PDF selection foundation with zoom and page-range confirmation, a built-in AI generation adapter with a safe offline fallback, novel and comic reader modes, reusable CSS visual assets, local story saving, reading progress and episode quizzes. Real PDF extraction/OCR and source-preserving research ingestion remain the next material-mode milestone.
+
+Implementation lives in `src/`, `server/`, `content/` and `public/`; the shared rules remain in [`COLLABORATION.md`](./COLLABORATION.md).

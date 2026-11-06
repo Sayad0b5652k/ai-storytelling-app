@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17202c" />
+    <meta name="description" content="Turn any topic or study material into a memorable learning story." />
+    <title>Story Atlas · AI Storytelling App</title>
+    <link rel="icon" href="/assets/storyapp-logo.svg" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="side-rail" aria-label="Story studio navigation">
+        <a class="brand" href="#" data-action="home" aria-label="Story Atlas home">
+          <span class="brand-mark"><span></span><i></i></span>
+          <span><strong>Story</strong><em>Atlas</em></span>
+        </a>
+        <div class="rail-caption">STUDIO ROUTE</div>
+        <nav class="route-nav">
+          <button class="route-item is-active" data-step="setup"><span>01</span><b>Shape</b><small>Choose your source</small></button>
+          <button class="route-item" data-step="story"><span>02</span><b>Story</b><small>Read the journey</small></button>
+          <button class="route-item" data-step="library"><span>03</span><b>Library</b><small>Return to saved work</small></button>
+        </nav>
+        <div class="rail-note"><span class="pulse-dot"></span><p>Built for curious minds<br /><strong>Works offline after save</strong></p></div>
+      </aside>
+
+      <main class="main-stage">
+        <header class="topbar">
+          <div class="breadcrumb"><span>STORY STUDIO</span><i>/</i><strong id="crumb-label">NEW JOURNEY</strong></div>
+          <div class="top-actions"><button class="icon-button" data-action="library" aria-label="Open saved stories">▤</button><span class="avatar">SA</span></div>
+        </header>
+
+        <section id="setup-view" class="view is-visible" aria-labelledby="setup-title">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span>LEARNING, WITH A PLOT</div>
+            <h1 id="setup-title">Give a topic<br /><em>a memory.</em></h1>
+            <p>Choose what the story should remember. Start with a question, or bring a page from your own study material.</p>
+          </div>
+
+          <div class="studio-card setup-card">
+            <div class="source-tabs" role="tablist" aria-label="Source type">
+              <button class="source-tab is-active" data-source="topic" role="tab" aria-selected="true"><span class="tab-icon">✦</span><span><b>Start with a topic</b><small>Let the story lead</small></span></button>
+              <button class="source-tab" data-source="material" role="tab" aria-selected="false"><span class="tab-icon">▧</span><span><b>Bring material</b><small>Choose pages from a PDF</small></span></button>
+            </div>
+
+            <div id="topic-panel" class="source-panel is-active">
+              <label class="field-label" for="topic-input">What should we explore?</label>
+              <div class="topic-input-wrap"><input id="topic-input" type="text" value="Mughal Empire" placeholder="e.g. Photosynthesis, French Revolution..." autocomplete="off" /><span>⌘ K</span></div>
+              <div class="suggestions"><button data-topic="Photosynthesis">Photosynthesis</button><button data-topic="The Silk Road">The Silk Road</button><button data-topic="Indian Constitution">Indian Constitution</button></div>
+            </div>
+
+            <div id="material-panel" class="source-panel" hidden>
+              <div class="material-head"><div><label class="field-label" for="material-file">Study material</label><p class="field-help">Your document stays on this device in this prototype.</p></div><label class="upload-button" for="material-file">＋ Add PDF<input id="material-file" type="file" accept="application/pdf,.pdf" /></label></div>
+              <div class="pdf-workbench">
+                <div class="pdf-toolbar"><span class="pdf-name" id="pdf-name">history-notes.pdf</span><div class="pdf-tools"><button data-pdf-zoom="out" aria-label="Zoom out">−</button><b id="zoom-label">100%</b><button data-pdf-zoom="in" aria-label="Zoom in">＋</button></div></div>
+                <div class="pdf-body"><div class="pdf-pages"><button class="pdf-page is-selected">12</button><button class="pdf-page">13</button><button class="pdf-page">14</button><button class="pdf-page">15</button><button class="pdf-page">16</button></div><div class="pdf-sheet" id="pdf-sheet"><div class="sheet-kicker">CHAPTER II · RISE OF EMPIRES</div><h3>When a victory becomes a question</h3><p>Power is more than the moment of conquest. It is the long work of organising people, memory and place.</p><div class="sheet-rule"></div><p class="faded">Detected heading · The First Battle of Panipat</p><p class="faded">Detected heading · Administration and culture</p><div class="scan-mark">Selected range</div></div></div>
+              </div>
+              <div class="range-row"><div><label class="field-label" for="page-range">Selected pages</label><p class="field-help">TOC detected · 5 sections found</p></div><div class="range-controls"><select id="range-start" aria-label="Start page"><option>12</option><option>13</option><option>14</option></select><span>to</span><select id="range-end" aria-label="End page"><option>28</option><option>32</option><option>40</option></select></div></div>
+              <div class="material-confirm"><span class="check-mark">✓</span><span><b id="material-selection-label">Pages 12–28 ready</b><small>Preview the extracted range before the story begins</small></span></div>
+            </div>
+
+            <div class="divider"><span>STORY SETTINGS</span></div>
+            <div class="settings-grid">
+              <label><span>Language</span><select id="language-select"><option>English</option><option>हिन्दी</option><option>Hinglish</option></select></label>
+              <label><span>Learning level</span><select id="level-select"><option>Beginner</option><option selected>Intermediate</option><option>Advanced</option></select></label>
+              <label><span>Story length</span><select id="length-select"><option>Short</option><option selected>Standard</option><option>Deep dive</option></select></label>
+            </div>
+            <div class="mode-row"><div><label class="field-label">Knowledge mode</label><p class="field-help">How should the facts enter the plot?</p></div><div class="mode-options"><button class="mode-option" data-mode="material"><span>◌</span><b>Material only</b></button><button class="mode-option is-selected" data-mode="hybrid"><span>◉</span><b>Material + research</b></button><button class="mode-option" data-mode="research"><span>✧</span><b>Research path</b></button></div></div>
+            <div class="card-footer"><p><span class="lock-dot">◌</span> No account needed · saved locally</p><button class="primary-button" id="generate-button"><span>Build my story</span><i>↗</i></button></div>
+          </div>
+        </section>
+
+        <section id="story-view" class="view" aria-labelledby="story-title" hidden>
+          <div class="story-header"><div><div class="eyebrow"><span class="eyebrow-line"></span><span id="story-kicker">EPISODE 01 · SOURCE AWARE</span></div><h2 id="story-title">The Empire Between Two Pages</h2><p id="story-subtitle">A guided learning story with verified facts and clearly labelled dramatic framing.</p></div><div class="story-actions"><button class="secondary-button" data-action="save"><span id="save-icon">＋</span> <span id="save-label">Save story</span></button><button class="icon-button" data-action="setup" aria-label="Create another story">＋</button></div></div>
+          <div class="reader-toolbar"><div class="episode-tabs" id="episode-tabs"></div><div class="reader-tools"><div class="toggle-group"><button class="reader-mode is-selected" data-reader-mode="novel">Novel</button><button class="reader-mode" data-reader-mode="comic">Comic</button></div><button class="text-size-button" data-action="text-smaller">A−</button><button class="text-size-button" data-action="text-larger">A＋</button></div></div>
+          <div class="source-ribbon"><span class="source-pin">⌖</span><span id="source-ribbon-text">Source range · pp. 12–28</span><button id="source-details">View source notes</button></div>
+          <div id="reader-content" class="reader-content"></div>
+          <div id="quiz-panel" class="quiz-panel"></div>
+        </section>
+
+        <section id="library-view" class="view" aria-labelledby="library-title" hidden>
+          <div class="library-header"><div><div class="eyebrow"><span class="eyebrow-line"></span>YOUR READING ROOM</div><h2 id="library-title">Stories worth<br /><em>returning to.</em></h2></div><button class="primary-button" data-action="setup"><span>New story</span><i>↗</i></button></div>
+          <div id="library-grid" class="library-grid"></div>
+        </section>
+
+        <footer class="app-footer"><span>STORY ATLAS · PRIVATE BY DEFAULT</span><span>AI-assisted · source-aware · reusable by design</span></footer>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

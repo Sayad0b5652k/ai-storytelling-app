@@ -1,0 +1,11 @@
+{
+  "name": "ai-storytelling-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "start": "node server/index.mjs",
+    "check": "node --check server/index.mjs && node --check src/app.js"
+  }
+}

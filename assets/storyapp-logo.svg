@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="AI Storytelling App logo">
+  <rect width="512" height="512" rx="112" fill="#17202c"/>
+  <path d="M138 132h236v38H138zm0 76h186v38H138zm0 76h236v38H138z" fill="#f4ead7"/>
+  <circle cx="356" cy="227" r="30" fill="#e8a23a"/>
+  <path d="M138 398c67-45 130-45 236 0" fill="none" stroke="#e8a23a" stroke-width="18" stroke-linecap="round"/>
+</svg>
