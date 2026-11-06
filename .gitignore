@@ -1,0 +1,31 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Build and dependency output
+build/
+dist/
+.gradle/
+node_modules/
+.dart_tool/
+
+# Local/private user data
+*.pdf
+*.epub
+*.docx
+.local-data/
+.cache/
+
+# Generated media and logs
+*.log
+/tmp/
+/generated/
